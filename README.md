@@ -1,31 +1,38 @@
 # CRUK technical exercise (React)
 
-- The below technical guidance has been provided for the task
-- You should use the CRUK component library when building your form https://www.npmjs.com/package/@cruk/cruk-react-components
-- Please do not attempt to push to this repo, clone it and it and make sure your first commit has no changes.
-- Code must be clean and production ready.
-- Feel free to edit this readme or add a new readme file for any additional information, such as what you might do in the future to improve this product.
-
-## Documentation for tools used
-
-- Formik: https://formik.org/docs/overview
-- Yup https://github.com/jquense/yup
-- Styled components https://styled-components.com/docs
-- NASA Images and Video Library API https://api.nasa.gov/
-
 ## Task details
 
-You will be building a form which will fetch assets from the NASA Images and Video Library API. The fields will provide filters for the query. The media returned should be displayed below the form for the user. The user should only see the first 10 items.
+- You will be building a form using Formik and our CRUK React Component Library.
+- This form which will fetch assets from the NASA Images and Video Library API.
+- The fields will provide filters for the query.
+- The media returned should be displayed in list below the form.
+- The user should only see the first 10 items on the page. If you have time, getting this working with some form pagination is a stretch target.
+- Code must be clean and production ready, quality is better than quantity.
+- Feel free to edit this readme or add a new readme file for any additional information, such as what you might do improve your application in the future.
+- Please do not attempt to push to this repo, ideally we would like you to create your own repo cloned from this one.
 
-## Fields
+## Tools to be used
+
+- NASA Images and Video Library API https://api.nasa.gov/
+- Formik (Forms): https://formik.org/docs/overview
+- Yup (Validation) https://github.com/jquense/yup
+- CRUK React Component Library Storybook site: https://master.d28a8la187lo73.amplifyapp.com/
+- CRUK React Component Library Package: https://www.npmjs.com/package/@cruk/cruk-react-components
+- Styled Components (What the CRUK Component Library was built with) https://styled-components.com/docs
+
+## Form fields
+
+This form has 3 fields:
 
 ### Keywords field
 
-Required  
-Initial value: “”  
-Type: Text  
-Label: Keywords  
-Name: keywords
+| Attribute | Value    |
+| :-------- | :------- |
+| Label     | Keywords |
+| Name      | keywords |
+| Required  | true     |
+| Type      | text     |
+| Default   | ""       |
 
 An error message below the field should read “Please enter keywords to search.” if the user does not fill in the field.
 
@@ -33,22 +40,26 @@ An error message below the field should read “Keywords must be between 2 and 5
 
 ### Media type field
 
-Required  
-Default: none  
-Type: Select  
-Label: Media type  
-Name: mediaType  
-Values: [“audio”, “video”, “image”]
+| Attribute | Value                       |
+| :-------- | :-------------------------- |
+| Label     | Media type                  |
+| Name      | mediaType                   |
+| Required  | true                        |
+| Type      | select                      |
+| Values    | [“audio”, “video”, “image”] |
+| Default   | none                        |
 
 An error message below the field should read “Please select a media type.” if the user does not select an option.
 
 ### Year start field
 
-Optional  
-Initial value: “”  
-Type: Text  
-Label: Year start  
-Name: yearStart
+| Attribute | Value      |
+| :-------- | :--------- |
+| Label     | Year start |
+| Name      | yearStart  |
+| Required  | false      |
+| Type      | text       |
+| Default   | ""         |
 
 An error message below the field should read “Please enter a valid year.” if the user enters an invalid year.
 
