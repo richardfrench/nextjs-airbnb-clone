@@ -7,8 +7,6 @@ import Document, {
 } from "next/document";
 import { ServerStyleSheet } from "styled-components";
 
-const COOKIE_DOMAIN_ID = process.env.NEXT_PUBLIC_COOKIE_DOMAIN_ID || "";
-
 const ENV_NAME = process.env.NEXT_PUBLIC_ENV_NAME || "";
 export default class MyDocument extends Document {
   isDev = ENV_NAME === "development";
