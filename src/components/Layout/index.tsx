@@ -30,7 +30,6 @@ export const Layout = ({ children }: LayoutProps) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
       <Header />
-      {/* <TopSection /> */}
       <PageContentWrapper id="main">{children}</PageContentWrapper>
       <FooterWrapper>
         <Footer>

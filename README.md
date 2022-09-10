@@ -2,9 +2,8 @@
 
 ## Task details
 
-- You will be building a form using Formik and our CRUK React Component Library.
-- This form which will fetch assets from the NASA Images and Video Library API.
-- The fields will provide filters for the query.
+- You will be building a form using the CRUK React Component Library and a form library of your choice such as Formik or React Hook Form and the validation library of your choice such as Yup or Zod.
+- This form which will fetch assets from the NASA Images and Video Library API The fields described below will modify the search query.
 - The media returned should be displayed in list below the form.
 - The user should only see the first 10 items on the page. If you have time, getting this working with some form pagination is a stretch target.
 - Code must be clean and production ready, quality is better than quantity.
