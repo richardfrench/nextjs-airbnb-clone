@@ -1,6 +1,6 @@
 import { ReactNode, useState } from "react";
 import Head from "next/head";
-import { Footer, Link } from "@cruk/cruk-react-components";
+import { Footer, Link, Header } from "@cruk/cruk-react-components";
 
 // import TopSection from "src/components/TopSection";
 
@@ -29,6 +29,7 @@ export const Layout = ({ children }: LayoutProps) => {
       <Head>
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
+      <Header />
       {/* <TopSection /> */}
       <PageContentWrapper id="main">{children}</PageContentWrapper>
       <FooterWrapper>

@@ -1,14 +1,13 @@
-import { Heading, Text } from "@cruk/cruk-react-components";
+import { Heading, Text, Box } from "@cruk/cruk-react-components";
 
 export const HomePage = () => (
-  <>
-    <Heading h1> Welcome to Next JS </Heading>
+  <Box marginTop="s" paddingTop="s">
+    <Heading h1>Welcome to Next JS</Heading>
 
     <Text>
-      {" "}
       Get started by editing <code>pages/index.tsx</code>
     </Text>
-  </>
+  </Box>
 );
 
 export default HomePage;

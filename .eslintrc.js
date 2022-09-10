@@ -11,7 +11,11 @@ module.exports = {
     "import/no-extraneous-dependencies": [
       2,
       {
-        devDependencies: ["**/*.cypress.tsx", "**/*.stories.tsx"],
+        devDependencies: [
+          "**/*.cypress.tsx",
+          "**/*.stories.tsx",
+          "**/*.test.tsx",
+        ],
       },
     ],
     "react/function-component-definition": [
