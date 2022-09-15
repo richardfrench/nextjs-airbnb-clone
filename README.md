@@ -8,16 +8,19 @@
 - The user should only see the first 10 items on the page. If you have time, getting this working with some form pagination is a stretch target.
 - Code must be clean and production ready, quality is better than quantity.
 - Feel free to edit this readme or add a new readme file for any additional information, such as what you might do improve your application in the future.
-- Please do not attempt to push to this repo, ideally we would like you to create your own repo cloned from this one.
+- Please do not attempt to push to this repo, ideally we would like you to create your own fork.
 
 ## Tools to be used
 
 - NASA Images and Video Library API https://api.nasa.gov/
-- Formik (Forms): https://formik.org/docs/overview
-- Yup (Validation) https://github.com/jquense/yup
 - CRUK React Component Library Storybook site: https://master.d28a8la187lo73.amplifyapp.com/
 - CRUK React Component Library Package: https://www.npmjs.com/package/@cruk/cruk-react-components
 - Styled Components (What the CRUK Component Library was built with) https://styled-components.com/docs
+
+Optional Libraries
+
+- Formik (Forms): https://formik.org/docs/overview
+- Yup (Validation) https://github.com/jquense/yup
 
 ## Form fields
 

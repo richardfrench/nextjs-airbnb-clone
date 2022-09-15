@@ -37,14 +37,10 @@ export default class MyDocument extends Document {
     }
   }
 
-  //  I would love to not use dangerouslySetInnerHTML
-  // but due to the requirement enforce GTM before cookie banner before any other script it's not possible
-  // also self closing script tags aren't allowed
-  /* eslint-disable react/no-danger, react/self-closing-comp */
   render() {
     return (
       <Html lang="en">
-        <Head></Head>
+        <Head />
         <body>
           <Main />
           <NextScript />
@@ -52,5 +48,4 @@ export default class MyDocument extends Document {
       </Html>
     );
   }
-  /* eslint-enable */
 }
