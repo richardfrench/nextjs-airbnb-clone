@@ -2,8 +2,6 @@ import { ReactNode, useState } from "react";
 import Head from "next/head";
 import { Footer, Link, Header } from "@cruk/cruk-react-components";
 
-// import TopSection from "src/components/TopSection";
-
 import {
   PageContentWrapper,
   StyledUL,

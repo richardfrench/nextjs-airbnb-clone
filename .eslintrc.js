@@ -6,8 +6,7 @@ module.exports = {
     project: ["./tsconfig.json"],
   },
   rules: {
-    // this is because even though storybook is a production deploy it's after compilation,
-    // and we don't want storybook stuff to be seen as a production dep for anyone importing the component lib
+    // It's ok to have dev dependencies imported for test files
     "import/no-extraneous-dependencies": [
       2,
       {
