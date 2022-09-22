@@ -1,3 +1,9 @@
+export type NasaSearchParams = {
+  keywords: string;
+  yearStart: number;
+  mediaType: "audio" | "video" | "image";
+};
+
 export type NasaResponse = {
   collection: {
     version: string;

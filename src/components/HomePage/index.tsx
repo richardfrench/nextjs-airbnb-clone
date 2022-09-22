@@ -1,26 +1,24 @@
 import { Heading, Text, Box } from "@cruk/cruk-react-components";
-// import useNasaQuery from "../../hooks/useNasaQuery";
+import { NasaSearchParams } from "../../types";
+import Results from "../Results";
 
 export const HomePage = () => {
-  const searchParams = { keywords: "moon" };
+  //
+  // form and validation code here
 
-  // validation and form code here
-
-  // Data fetching code here
-
-  // type InputTypes = typeof searchParams;
-  // const { data, error, isLoading } = useNasaQuery<InputTypes>(searchParams);
+  const exampleParam: NasaSearchParams = {
+    keywords: "moon",
+    yearStart: 2000,
+    mediaType: "image",
+  };
 
   return (
     <Box marginTop="s" paddingTop="s">
       <Heading h1>React Exercise</Heading>
-      <Text>
-        Get started by editing <code>src/components/HomePage/index.tsx</code>
-      </Text>
 
-      {/* form here */}
+      <Text>Form goes here</Text>
 
-      {/* results here */}
+      <Results searchParams={exampleParam} />
     </Box>
   );
 };
