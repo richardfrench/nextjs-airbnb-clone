@@ -2,9 +2,10 @@
 
 ## Task details
 
-- You will be building a form using the CRUK React Component Library and a form library of your choice such as Formik or React Hook Form and the validation library of your choice such as Yup or Zod.
+- We will be testing your ability to understand an existing React/Typescript codebase understand what is already and build what is not
+- You will be building a form using the CRUK React Component Library and a form library of your choice such React Hook Form or Formik and a validation library of your choice such as Zod or Yup.
 - This form which will fetch assets from the NASA Images and Video Library API The fields described below will modify the search query.
-- The media returned should be displayed in list below the form.
+- The media returned should be displayed in list below the form, these may be images, video, or audio clips. It is up to you how you display these
 - The user should only see the first 10 items on the page. If you have time, getting this working with some form pagination is a stretch target.
 - Code must be clean and production ready, quality is better than quantity.
 - Feel free to edit this readme or add a new readme file for any additional information, such as what you might do improve your application in the future.
@@ -12,19 +13,21 @@
 
 ## Tools to be used
 
-- NASA Images and Video Library API https://api.nasa.gov/
 - CRUK React Component Library Storybook site: https://master.d28a8la187lo73.amplifyapp.com/
 - CRUK React Component Library Package: https://www.npmjs.com/package/@cruk/cruk-react-components
 - Styled Components (What the CRUK Component Library was built with) https://styled-components.com/docs
+- NASA Images and Video Library API https://api.nasa.gov/
 
-Optional Libraries
+## Optional Libraries
 
+- React Hook Form (Forms): https://react-hook-form.com/
 - Formik (Forms): https://formik.org/docs/overview
+- Zod (Validation) https://zod.dev/
 - Yup (Validation) https://github.com/jquense/yup
 
 ## Form fields
 
-This form has 3 fields:
+This form has 3 fields and error messages should appear below each field.
 
 ### Keywords field
 
@@ -36,9 +39,14 @@ This form has 3 fields:
 | Type      | text     |
 | Default   | ""       |
 
-An error message below the field should read “Please enter keywords to search.” if the user does not fill in the field.
+### Keywords validation
 
-An error message below the field should read “Keywords must be between 2 and 50 characters.” if the field value is less than 2 or more than 50 characters long.
+| Type       | Value | Message                                     |
+| :--------- | :---- | :------------------------------------------ |
+| min length | 2     | "keywords must have at least 2 characters." |
+| max length | 50    | "keywords must have at most 50 characters." |
+
+An error message should appear below the field
 
 ### Media type field
 
@@ -51,7 +59,11 @@ An error message below the field should read “Keywords must be between 2 and 5
 | Values    | [“audio”, “video”, “image”] |
 | Default   | none                        |
 
-An error message below the field should read “Please select a media type.” if the user does not select an option.
+### Media types validation
+
+| Type     | Value             | Message                       |
+| :------- | :---------------- | :---------------------------- |
+| if unset | null or undefined | "Please select a media type." |
 
 ### Year start field
 
@@ -63,9 +75,13 @@ An error message below the field should read “Please select a media type.” i
 | Type      | text       |
 | Default   | ""         |
 
-An error message below the field should read “Please enter a valid year.” if the user enters an invalid year.
+### Year start validation
 
-An error message below the field should read “Year must not be in the future.” if the user enters a year after the current year.
+| Type        | Value                  | Message                                 |
+| :---------- | :--------------------- | :-------------------------------------- |
+| number type | any non digit charater | "Please enter a valid number."          |
+| min         | 1900                   | "Year start must be after 1900."        |
+| max         | current year           | "Year start must not be in the future." |
 
 ### Submit button
 
@@ -73,7 +89,7 @@ Submit button should change to a disabled state and label should read “Submitt
 
 ## Tests
 
-Ensure your application has adequate test coverage.
+Ensure your application has adequate test coverage. It is up to you what test library you use, however Jest and React Testing Library has already been configured. See src/components/HomePage/homePage.test.tsx
 
 ---
 
